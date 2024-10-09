@@ -170,6 +170,11 @@ namespace CourseManagement
         public string CapitalizeTitle(string title)
         {
             var words = title.Split(' ');
+            for (int i=0; i < words.Length; i++)
+            {
+                words[i] = char.ToUpper(words[i][0]) + words[i].Substring(1).ToLower();
+            }
+            return string.Join(" ", words);
         }
     }
 }

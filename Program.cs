@@ -27,6 +27,9 @@ namespace CourseManagement
 
             
 
+
+
+
             bool repeat = false;
 
             while(!repeat)
@@ -84,13 +87,18 @@ namespace CourseManagement
             string title = Console.ReadLine();
             Console.Write("Enter Course Duration : ");
             string duration = Console.ReadLine();
+
+            
             
             CourseManager courseManager = new CourseManager();
             decimal validatedPrice = courseManager.validateCoursePrice();
 
-            InsertCourse insertCourse = new InsertCourse(title, duration, validatedPrice);
-
             CourseRepository courseRepository = new CourseRepository();
+            string capitalTitle = courseRepository.CapitalizeTitle(title);
+
+            InsertCourse insertCourse = new InsertCourse(capitalTitle, duration, validatedPrice);
+
+            
             courseRepository.AddCourse(insertCourse);
 
             
@@ -167,5 +175,9 @@ namespace CourseManagement
             Console.ReadKey();
 
         }
+
+
+        
+       
     }
 }
