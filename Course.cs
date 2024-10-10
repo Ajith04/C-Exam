@@ -8,6 +8,8 @@ namespace CourseManagement
 {
     internal class Course
     {
+
+        public static int TotalCourses { get; set; }
         public int CourseId { get; set; }
         public string Title { get; set; }
         public string Duration { get; set; }
@@ -19,11 +21,19 @@ namespace CourseManagement
             Title = title;
             Duration = duration;
             Price = price;
+            TotalCourses++;
         }
 
         public override string ToString()
         {
             return $"Id:{CourseId}, Title:{Title}, Duration:{Duration},Price:{Price}";
+        }
+
+        public virtual string DisplayCourseInfo()
+        {
+
+            return $"Course Id: {CourseId}\n Title: {Title}\n Duration: {Duration}\n Price: {Price}";
+
         }
     }
 }

@@ -46,7 +46,9 @@
     <Compile Include="Course.cs" />
     <Compile Include="CourseManager.cs" />
     <Compile Include="CourseRepository.cs" />
+    <Compile Include="DigitalCourse.cs" />
     <Compile Include="InsertCourse.cs" />
+    <Compile Include="OnPremiseCourse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

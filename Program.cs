@@ -25,6 +25,20 @@ namespace CourseManagement
             courseManager.DeleteCourse(2);
             courseManager.ReadCourses();
 
+            DigitalCourse digitalCourse = new DigitalCourse(3,"Python","10 Months",6000,"www.google.com","50MB");
+            string digital = digitalCourse.DisplayCourseInfo();
+            Console.WriteLine(digital);
+
+           
+            
+
+            OnPremiseCourse onPremiseCourse = new OnPremiseCourse(4,"TypeScript","6 months",5000,"3pm -5pm","60 students");
+            string onPremise = onPremiseCourse.DisplayCourseInfo();
+            Console.WriteLine(onPremise);
+
+            Console.WriteLine($"Total Courses: {Course.TotalCourses}");
+            
+
             
 
 
@@ -34,7 +48,7 @@ namespace CourseManagement
 
             while(!repeat)
             {
-                Console.Clear();
+                
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Course Management System");
                 Console.WriteLine("...........................");
